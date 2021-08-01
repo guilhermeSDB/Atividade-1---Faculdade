@@ -70,10 +70,9 @@ $funcionarios = array(
 <body>
     <div class="container-xl">
         <div class="row justify-content-center ">
-            <!-- Tabela 1 -->       
-                <table class="table table-responsive text-center">
+            <!-- Tabela 1 --> 
+                <table class="table align-middle table-responsive text-center">
                     <thead class="table-dark">
-                    <tr>
                         <th scope="col"></th>
                         <th scope="col">Colaborador</th>
                         <th scope="col">Salario Fixo</th>
@@ -81,14 +80,13 @@ $funcionarios = array(
                         <th scope="col">Venda Semana 2</th>
                         <th scope="col">Venda Semana 3</th>
                         <th scope="col">Venda Semana 4</th>
-                        <th class="table-primary" scope="col">Total vendas</th>
-                        <th class="table-primary" scope="col">Comissão</th>
-                        <th class="table-primary" scope="col">Salario Final</th>
-                    </tr>
+                        <th scope="col">Total vendas</th>
+                        <th scope="col">Comissão</th>
+                        <th scope="col">Salario Final</th>
+                       
                     </thead>
                     <tbody>
-                        <?php foreach($funcionarios as $item){
-                         ?>
+                    <?php foreach($funcionarios as $item): ?>
                             <tr class="table-light">
                                 <th scope="row"></th>                                
                                     <td><?= $item['nome'] ?></td>
@@ -100,10 +98,12 @@ $funcionarios = array(
                                     <td class="table-info"><?= $item['total-vendas'] = $item['salario-fixo']+$item['venda1']+$item['venda2']+$item['venda3']+$item['venda4']?></td>
                                     <td class="table-info"><?= $item['comissao'] = $item['total-vendas'] * 0.05 ?></td>
                                     <td class="table-info"><?= $item['salario-final'] = $item['salario-fixo']+$item['comissao']?></td> 
-                            </tr>
-                        <?php } ?>
+                                                              
+                            <?php endforeach; ?>                        
+                        </td>
+                        </tr>                        
                     </tbody>
-                </table>                
+                </table>              
             </div>
         </div>
     </div>   
