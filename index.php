@@ -1,7 +1,6 @@
 <?php 
 
 
-
 $nome = $_POST['nome'];
 $salario_fixo = $_POST['salario-fixo'];
 $venda1 = $_POST['venda1'];
@@ -13,7 +12,6 @@ $venda4 = $_POST['venda4'];
 // echo '<pre>';
 // var_dump($_POST);
 // echo '</pre>';
-
 
 
 $funcionarios = array(
@@ -67,13 +65,9 @@ foreach($funcionarios as $item){
 
     
 
-
-
-
-
-echo '<pre>';
-var_dump($funcionarios);
-echo '</pre>';
+// echo '<pre>';
+// var_dump($funcionarios);
+// echo '</pre>';
 
 // if($_POST != null){
     
