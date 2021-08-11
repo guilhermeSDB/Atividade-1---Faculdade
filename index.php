@@ -95,7 +95,7 @@ $funcionarios = array(
                                     <td><?= $item['venda2'] ?></td>
                                     <td><?= $item['venda3'] ?></td>
                                     <td><?= $item['venda4'] ?></td>
-                                    <td class="table-info"><?= $item['total-vendas'] = $item['salario-fixo']+$item['venda1']+$item['venda2']+$item['venda3']+$item['venda4']?></td>
+                                    <td class="table-info"><?= $item['total-vendas'] = $item['venda1']+$item['venda2']+$item['venda3']+$item['venda4']?></td>
                                     <td class="table-info"><?= $item['comissao'] = $item['total-vendas'] * 0.05 ?></td>
                                     <td class="table-info"><?= $item['salario-final'] = $item['salario-fixo']+$item['comissao']?></td> 
                                                               
