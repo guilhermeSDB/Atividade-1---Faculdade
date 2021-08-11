@@ -36,6 +36,7 @@ $funcionarios = array(
     'venda4' => 2250,),    
 );
 
+setlocale(LC_MONETARY, "pt_BR");
 
 ?>
 
@@ -90,15 +91,14 @@ $funcionarios = array(
                             <tr class="table-light">
                                 <th scope="row"></th>                                
                                     <td><?= $item['nome'] ?></td>
-                                    <td><?= $item['salario-fixo'] ?></td>
-                                    <td><?= $item['venda1'] ?></td>
-                                    <td><?= $item['venda2'] ?></td>
-                                    <td><?= $item['venda3'] ?></td>
-                                    <td><?= $item['venda4'] ?></td>
-                                    <td class="table-info"><?= $item['total-vendas'] = $item['venda1']+$item['venda2']+$item['venda3']+$item['venda4']?></td>
-                                    <td class="table-info"><?= $item['comissao'] = $item['total-vendas'] * 0.05 ?></td>
-                                    <td class="table-info"><?= $item['salario-final'] = $item['salario-fixo']+$item['comissao']?></td> 
-                                                              
+                                    <td>R$ <?= $item['salario-fixo'] ?></td>
+                                    <td>R$ <?= $item['venda1'] ?></td>
+                                    <td>R$ <?= $item['venda2'] ?></td>
+                                    <td>R$ <?= $item['venda3'] ?></td>
+                                    <td>R$ <?= $item['venda4'] ?></td>
+                                    <td class="table-info">R$ <?= $item['total-vendas'] = $item['venda1']+$item['venda2']+$item['venda3']+$item['venda4']?></td>
+                                    <td class="table-info">R$ <?= $item['comissao'] = $item['total-vendas'] * 0.05 ?></td>
+                                    <td class="table-info">R$ <?= $item['salario-final'] = $item['salario-fixo']+$item['comissao']?></td>                                                               
                             <?php endforeach; ?>                        
                         </td>
                         </tr>                        
